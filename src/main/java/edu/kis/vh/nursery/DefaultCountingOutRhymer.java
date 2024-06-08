@@ -25,6 +25,7 @@ public class DefaultCountingOutRhymer {
         if (callCheck())
             return EMPTY;
         return numbers[total];
+
     }
 
     public int countOut() {
