@@ -10,11 +10,16 @@ public class DefaultCountingOutRhymer {
     /**Zmienna, która oznacza pustą tablicę*/
     public static final int EMPTY = -1;
 
+    /**Zmienna, która jest błędem pustej tablicy*/
+    public static final int EMPTY_ERROR = -1;
+
     /**Tworzenie tablicy z maksymalnym rozmiarem*/
-    private int[] numbers = new int[CAPACITY];
+    private final int[] numbers = new int[CAPACITY];
 
     /**Tworzenie iteratora dla tablicy z początkowym znaczeniem EMPTY (-1)*/
     public int total = EMPTY;
+
+
 
     /**
      funkcja która dodaje podany element do tablicy
@@ -49,7 +54,7 @@ public class DefaultCountingOutRhymer {
      */
     protected int peekaboo() {
         if (callCheck())
-            return EMPTY;
+            return EMPTY_ERROR;
         return numbers[total];
 
     }
@@ -61,7 +66,7 @@ public class DefaultCountingOutRhymer {
      */
     public int countOut() {
         if (callCheck())
-            return EMPTY;
+            return EMPTY_ERROR;
         return numbers[total--];
     }
 
