@@ -17,7 +17,7 @@ public class DefaultCountingOutRhymer {
     private final int[] numbers = new int[CAPACITY];
 
     /**Tworzenie iteratora dla tablicy z początkowym znaczeniem EMPTY (-1)*/
-    public int total = EMPTY;
+    private int total = EMPTY;
 
 
 
