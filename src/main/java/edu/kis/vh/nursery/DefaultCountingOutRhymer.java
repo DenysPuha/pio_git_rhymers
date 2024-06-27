@@ -8,7 +8,7 @@ public class DefaultCountingOutRhymer {
     public static final int CAPACITY = 12;
 
     /**Zmienna, która oznacza pustą tablicę*/
-    public static final int EMPTY = -1;
+    public static final int EMPTY_INDEX = -1;
 
     /**Zmienna, która jest błędem pustej tablicy*/
     public static final int EMPTY_ERROR = -1;
@@ -17,7 +17,7 @@ public class DefaultCountingOutRhymer {
     private final int[] numbers = new int[CAPACITY];
 
     /**Tworzenie iteratora dla tablicy z początkowym znaczeniem EMPTY (-1)*/
-    private int total = EMPTY;
+    private int total = EMPTY_INDEX;
 
 
 
@@ -36,7 +36,7 @@ public class DefaultCountingOutRhymer {
      Jeśli tak to zwraca true, jeśli nie false
      */
     public boolean callCheck() {
-        return total == EMPTY;
+        return total == EMPTY_INDEX;
     }
 
     /**
